@@ -9,7 +9,7 @@
 
 
 <a href="{{ url('/prova')}}">IR A SALUDO</a>
-<a href="{{ route('saludo')}}">IR A SALUDO2</a>
+<a href="{{ route('saludo')}}">IR A SALUDO696969</a>
 
 
 @endsection
