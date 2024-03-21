@@ -16,7 +16,7 @@ class CiclesController extends Controller
 
          if ($actiu == 'actiu')
           {
-            $cicles = Cicles::where('actiu','=','true')
+            $cicles = Cicles::where('actiu','=', true)
                              ->get();
          }
          else {
@@ -24,6 +24,9 @@ class CiclesController extends Controller
 
          }
         
+        $request->session()->flashInput($request->input());
+
+
         return view("cicles.index", compact("cicles"));
     }
 

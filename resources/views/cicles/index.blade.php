@@ -9,10 +9,25 @@
              <form action="{{action([App\Http\Controllers\CiclesController::class,'index'])}}">
             <div class="form-row">
                 <div class="col-1">
+
+                    @if (old('actiuBuscar') == 'actiu')
+                     
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="actiuBuscar" name="actiuBuscar" value="actiu" checked>
+                        <label class="custom-control-label" for="actiuBuscar">Actiu</label>    
+                    </div>
+
+
+                    @else
+                     
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="actiuBuscar" name="actiuBuscar" value="actiu">
                         <label class="custom-control-label" for="actiuBuscar">Actiu</label>    
                     </div>
+
+                    @endif
+
+                 
                 </div>
                 <div class="col-1">
                     <button type="submit" class="btn btn-secondary"> <i class="fa fa-search" aria-hidden="true"></i></button>

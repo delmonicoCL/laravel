@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-route::get("/", [App\Http\Controllers\SaludController::class, 'inicio']);
+// route::get("/", [App\Http\Controllers\SaludController::class, 'inicio']);
 route::post("/saludo/{comentario}", [App\Http\Controllers\SaludController::class, 'saludo']);
 
 
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+ Route::get('/', function () {
+   return view('index');
+ });
 
 
 
