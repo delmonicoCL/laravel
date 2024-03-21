@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CiclesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,3 +54,5 @@ route::get("/suma/{numero1?}/{numero2?}", function ($numero1, $numero2) {
     return ("LA SUMA DE $numero1 y $numero2 es: $resultado");
 
 });
+
+Route::resource('cicle', CiclesController::class);
