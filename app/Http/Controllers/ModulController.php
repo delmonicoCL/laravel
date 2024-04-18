@@ -2,32 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cicles;
+use App\Models\Modul;
 use Illuminate\Http\Request;
 
-class CiclesController extends Controller
+class ModulController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        $actiu = $request->input('actiuBuscar');
-
-         if ($actiu == 'actiu')
-          {
-            $cicles = Cicles::where('actiu','=', true)
-                             ->get();
-         }
-         else {
-            $cicles = Cicles::all();
-
-         }
-        
-        $request->session()->flashInput($request->input());
-
-
-        return view("cicles.index", compact("cicles"));
+        //
     }
 
     /**
@@ -49,7 +34,7 @@ class CiclesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(cicles $cicles)
+    public function show(Modul $modul)
     {
         //
     }
@@ -57,7 +42,7 @@ class CiclesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(cicles $cicles)
+    public function edit(Modul $modul)
     {
         //
     }
@@ -65,7 +50,7 @@ class CiclesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, cicles $cicles)
+    public function update(Request $request, Modul $modul)
     {
         //
     }
@@ -73,7 +58,7 @@ class CiclesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(cicles $cicles)
+    public function destroy(Modul $modul)
     {
         //
     }
